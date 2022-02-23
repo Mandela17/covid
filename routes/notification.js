@@ -10,8 +10,8 @@ router.post("/", async (req, res) => {
   });
 
   try {
-    const savedBooking = await booking.save();
-    res.json("BookingId: " + savedBooking._id);
+    const savedNotification = await notification.save();
+    res.json(savedNotification);
   } catch (error) {
     res.json({ message: error });
   }

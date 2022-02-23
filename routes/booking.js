@@ -15,6 +15,7 @@ router.post("/", async (req, res) => {
 
   try {
     const savedBooking = await booking.save();
+    console.log("You have successfully alloted hospital");
     res.json("BookingId: " + savedBooking._id);
   } catch (error) {
     res.json({ message: error });
